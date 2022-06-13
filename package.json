@@ -1,26 +1,27 @@
 {
-	"name": "p-timeout",
+	"name": "@zitao/p-timeout",
 	"version": "5.1.0",
 	"description": "Timeout a promise after a specified amount of time",
 	"license": "MIT",
-	"repository": "sindresorhus/p-timeout",
+	"repository": "caoer/p-timeout",
 	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
 		"url": "https://sindresorhus.com"
 	},
-	"type": "module",
 	"exports": "./index.js",
-	"engines": {
+  "types": "dist/index.d.ts",
+
+  "engines": {
 		"node": ">=12"
 	},
 	"scripts": {
+	    "build": "rimraf dist && tsc",
 		"test": "xo && ava && tsd"
 	},
 	"files": [
-		"index.js",
-		"index.d.ts"
+		"dist"
 	],
 	"keywords": [
 		"promise",
